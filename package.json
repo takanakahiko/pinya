@@ -1,0 +1,24 @@
+{
+  "name": "pinya",
+  "version": "0.0.0",
+  "description": "pin to your tweet",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "url": "takanakahiko/pinya",
+    "type": "git"
+  },
+  "author": "takanakahiko<takanakahiko@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/twit": "^2.2.21",
+    "ts-node": "^7.0.1",
+    "twitter-d": "^0.2.1",
+    "typescript": "^3.1.4"
+  },
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
