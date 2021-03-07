@@ -1,7 +1,7 @@
 {
   "name": "pinya",
   "version": "0.0.0",
-  "description": "pin to your tweet",
+  "description": "Pin tweet to your profile.",
   "scripts": {
     "start": "ts-node src/index.ts"
   },
