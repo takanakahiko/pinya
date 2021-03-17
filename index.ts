@@ -36,10 +36,10 @@ export default class TwitterUtil {
 const main = async () => {
   const twitter = new TwitterUtil()
 
-  if(process.argv[2]){　// ツイートをピンする
+  if(process.argv[2]){ // ツイートをピンする
     twitter.pin(process.argv[2])
 
-  } else {　// ツイート一覧を見る
+  } else { // ツイート一覧を見る
     const statuses = await twitter.getTweets()
     console.log(statuses.slice(0,10).map(v => ({
       id_str: v.id_str,
