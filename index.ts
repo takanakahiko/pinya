@@ -1,4 +1,4 @@
-import * as Twit from 'twit'
+import Twit from 'twit'
 import { Status } from 'twitter-d'
 
 export default class TwitterUtil {
@@ -15,8 +15,9 @@ export default class TwitterUtil {
 
   public async getTweets(): Promise<Status[]> {
     const payload = {
-      count: 200,
+      count: 10,
       trim_user: true,
+      tweet_mode: "extended",
     }
     const ret = await this.twitter.get('statuses/user_timeline', payload)
     const statuses = ret.data as Status[]
@@ -41,7 +42,7 @@ const main = async () => {
 
   } else { // ツイート一覧を見る
     const statuses = await twitter.getTweets()
-    console.log(statuses.slice(0,10).map(v => ({
+    console.log(statuses.map(v => ({
       id_str: v.id_str,
       full_text: v.full_text
     })))

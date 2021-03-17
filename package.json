@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Pin tweet to your profile.",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node index.ts"
   },
   "repository": {
     "url": "takanakahiko/pinya",
