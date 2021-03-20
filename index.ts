@@ -20,8 +20,7 @@ export default class TwitterUtil {
       tweet_mode: "extended",
     }
     const ret = await this.twitter.get('statuses/user_timeline', payload)
-    const statuses = ret.data as Status[]
-    return statuses
+    return ret.data as Status[]
   }
 
   public async pin(id: string): Promise<Status> {
